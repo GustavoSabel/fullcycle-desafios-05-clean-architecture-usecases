@@ -1,5 +1,4 @@
 import Product from "../../../domain/product/entity/product";
-import ProductFactory from "../../../domain/product/factory/product.factory";
 import FindProductUseCase from "./find.product.usecase";
 
 const product = new Product("123", "Product 1", 1000);
