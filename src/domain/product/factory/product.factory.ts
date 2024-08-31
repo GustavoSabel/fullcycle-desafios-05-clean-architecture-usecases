@@ -11,11 +11,19 @@ export default class ProductFactory {
   ): ProductInterface {
     switch (type) {
       case "a":
-        return new Product(uuid(), name, price);
+        return this.createA(name, price);
       case "b":
-        return new ProductB(uuid(), name, price);
+        return this.createB(name, price);
       default:
         throw new Error("Product type not supported");
     }
+  }
+
+  public static createA(name: string, price: number): Product {
+    return new Product(uuid(), name, price);
+  }
+
+  public static createB(name: string, price: number): ProductB {
+    return new ProductB(uuid(), name, price);
   }
 }
